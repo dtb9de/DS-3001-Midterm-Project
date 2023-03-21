@@ -1,0 +1,18 @@
+Description:
+My code uses data from csv/json files, MongoDB, and MySQL
+The data initally starts in CSV form but is uploaded to both MongoDB and MySQL
+The completed database has 5 tables
+ - customers : originating on python/MongoDB, converted from customers.csv
+ - products : originating on python/MongoDB, converted from products.csv
+ - dim_customers : customers dimension imported with minor changes to variable names and types into MySQL 
+ - dim_products : products dimension imported with minor changes to variable names and types into MySQL
+ - dim_date : date dimension that utilizes the order_key column from dim_customers but is otherwise the same code from Lab 2 C and Lab 3
+
+Deployment:
+To deploy the code, one should run it in this order
+1. Start by creating the database 'supermart' in the MySQL file "Supermart_dataset" (code at the top)
+2. Next open the MySQL file "supermart_date_dim" and run the entire file
+ - When I run it, I get a mySQL lost connection error, but the code still works
+3. Then run all the code in the file "supermart mongodb" on jupyter notebooks
+4. Next run all the code in the MySQL file "Supermart_dataset"
+If run properly the code should successfully create an ETL pipeline for the data from the supermart code
